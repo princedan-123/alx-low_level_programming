@@ -4,12 +4,10 @@
  * Return: Returns 0.
  */
 int main(void)
-{	char x = 'g';
-
-	char y = 'G';
-
-	putchar(x);
-	putchar(y);
+{	for(int x = 'A'; x <= 'Z'; x++) 
+	{int lower_x = tolower(x);
+	 putchar(lower_x);
+	}
 	return (0);
 }
 
