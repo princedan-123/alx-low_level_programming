@@ -2,18 +2,19 @@
 /**
  * main - prints three alphabets.
  * Return: Returns 0.
- */
+*/
 int main(void)
-{	char ch = 'a'
+{	char x = 'a';
 
-	char Ch = 'A'
-	while (ch <= 'z')
-	{	putchar(ch); 
-		ch++;
+	char y = 'A';
+
+	while (x <= 'z')
+	{putchar(x);
+	 x++;	
 	}
-	while (Ch <= 'Z')
-	{	putchar(Ch); 
-		Ch++;
+	while (y <= 'Z')
+	{putchar(y); 
+	 y++;
 	}
-	Return (0);	
+	return (0);	
 }
