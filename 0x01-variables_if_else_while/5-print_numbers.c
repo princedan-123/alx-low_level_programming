@@ -1,14 +1,15 @@
-#include <stdio.h>
+#include<stdio.h>
 /**
- * main - prints base 10 characters
- * Returns: it returns 0
-*/
+ * main - prints base ten numbers
+ * Return: returns 0
+ */
 int main(void)
 {	int number = 0;
 
-	while (number < 10)
-	{printf("%d",number);
-	 number++;		
-	}	
+	while (number <= 9)
+	{	printf("%d", number);
+		number++;
+	}
+	putchar('\n');
 	return (0);
-}	
+}
