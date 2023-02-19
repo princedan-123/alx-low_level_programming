@@ -10,9 +10,9 @@ int main(void)
 		{	putchar(x);
 			x++;
 		}
-	char y = 'a';
+	char y = '97';
 
-	char f = 'f';
+	char f = '102';
 
 	while (y <= f)
 		{	putchar(y);
