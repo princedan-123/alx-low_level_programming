@@ -1,17 +1,23 @@
 #include<stdio.h>
 /**
- * main - prints alphabets in reverse
- * Return:returns 0
+ * main - prints hexadecimal numbers
+ * Return: it returns 0
  */
 int main(void)
-{	char z = 'z';
+{	int x = '0';
 
-	char a = 'a';
+	while (x <= '9')
+		{	putchar(x);
+			x++;
+		}
+	char y = 'a';
 
-	while (a <= z)
-	{	putchar(z);
-		z--;
-	}
+	char f = 'f';
+
+	while (y <= f)
+		{	putchar(y);
+			y++;
+		}
 	putchar('\n');
 	return (0);
 }
