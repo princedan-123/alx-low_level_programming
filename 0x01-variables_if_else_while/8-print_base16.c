@@ -4,15 +4,15 @@
  * Return: it returns 0
  */
 int main(void)
-{	int x = 48;
+{	int x = '0';
 
-	while (x <= 57)
+	while (x <= '9')
 		{	putchar(x);
 			x++;
 		}
-	int y = '97';
+	char y = 'a';
 
-	int f = '102';
+	char f = 'f';
 
 	while (y <= f)
 		{	putchar(y);
