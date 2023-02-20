@@ -9,6 +9,7 @@ int main(void)
 	char y = 'a';
 
 	char f = 'f';
+
 	while (x <= '9')
 		{	putchar(x);
 			x++;
