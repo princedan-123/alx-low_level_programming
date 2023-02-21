@@ -4,7 +4,7 @@
  * Return:Returns 0
  */
 int main(void)
-{	char c = 'a'
+{	char c = 'a';
 
 	while (c <= 'z')
 		{	_putchar(c);
