@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isupper(int c)- function that checkd case
+ * _isupper -  function that checkd case
  * @c: function parameter
  * Return: Returns 1 if c is uppercase else returns 0
  */
