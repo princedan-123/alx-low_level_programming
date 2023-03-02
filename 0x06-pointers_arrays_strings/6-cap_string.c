@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  * cap_string - capitalises all words in a string
  * @str: the string
@@ -6,19 +6,12 @@
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+	int i;
 
-	while (str[index])
+	for (i = 0; i <= '\0'; i++)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' || str[index - 1] == '\t' ||
-			str[index - 1] == '\n' || str[index - 1] == ',' || str[index - 1] == '.'
-			|| str[index - 1] == '!' || str[index - 1] == '?' ||
-			str[index - 1] == '"' || str[index - 1] == '(' || str[index - 1] == ')'
-			|| str[inde - 1] == '{' || str[index - 1] == '}' || index == 0)
-			str[index] -= 32;
-		index++;
+		if (str[i] <= 97 && str[i] <= 122)
+			str[i] = str[i] - 32;
 	}
 	return (str);
 }
