@@ -15,6 +15,7 @@ void print_to_98(int n)
 			if (n != 98)
 			printf("%c ", 44);
 		}
+		putchar('\n');
 	}
 	else if (n == 0)
 	{
@@ -24,6 +25,7 @@ void print_to_98(int n)
 			if (n != 98)
 			printf("%c ", 44);
 		}
+		putchar('\n');
 	}
 	else if ((n > 0) && (n < 98))
 	{
@@ -33,6 +35,7 @@ void print_to_98(int n)
 			if (n != 98)
 			printf("%c ", 44);
 		}
+		putchar('\n');
 	}
 	else
 	{
@@ -42,5 +45,6 @@ void print_to_98(int n)
 			if (n != 98)
 			printf("%c ", 44);
 		}
+		putchar('\n');
 	}
 }
