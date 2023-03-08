@@ -3,6 +3,7 @@
  * _sqrt_recursion - calculates the natural square root of n
  * @i: the interation number
  * @n: the number to be calculated
+ * Return: integers
  */
 int _sqrt_recursion(int n, int i)
 {
