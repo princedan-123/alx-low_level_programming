@@ -3,6 +3,7 @@
  * is_prime_number - evaluates in a number is a prime number
  * @n: the number to be evaluated
  * @i: the interation number
+ * Return: integers
  */
 int is_prime_number(int n, int i)
 {
