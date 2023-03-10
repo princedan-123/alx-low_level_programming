@@ -6,9 +6,9 @@
  * @argv: the parameter that stores argument string
  * Return: it returns zero
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	(void) argv[];
+	(void) argv;
 	printf("\n %d", argc);
 	return (0);
 }
