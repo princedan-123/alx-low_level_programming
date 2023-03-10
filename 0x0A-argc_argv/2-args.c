@@ -7,8 +7,9 @@
  * Return: zero
  */
 int main(int argc, char *argv[])
-{
-	for (i = 1; i < argc, i++)
+{	int i;
+
+	for (i = 1; i < argc; i++)
 		printf("/n %s", argv[i]);
 	_putchar('\n');
 	return (0);
