@@ -34,12 +34,15 @@ int _atoi(char *s)
 	ni *= min;
 	return (ni);
 }
+
+
 #include "main.h"
 #include <stdio.h>
 /**
  * main - multiplies two numbers
  * @argc: the number of arguments
  * @argv: the strings
+ * Return:0
  */
 int main(int argc, char *argv[])
 {	int num1;
