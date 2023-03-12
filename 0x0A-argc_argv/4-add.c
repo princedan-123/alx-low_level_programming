@@ -44,24 +44,28 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2, i, j;
+
+	int result;
 
 	if (argc < 3)
 		printf("0");
-	if ((argv[1] > 57) || (argv[1] < 48))
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	if  ((argv[2] > 57 ) || (argv[2] < 48))
-	{
-		printf("Error\n");
-		return (1);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if ((argv[i][j] < '0') || (argv[i][j] > '9'))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 	}
 	num1 = _atoi(argv[1]);
 	
 	num2 = _atoi(argv[2]);
 
 	result = num1 + num2;
-}
 
+	return (0);
+}
