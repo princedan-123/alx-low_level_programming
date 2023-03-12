@@ -41,6 +41,7 @@ int _atoi(char *s)
  * main - adds two strings converted to integers
  * @argv: strings to be coverted to integers
  * @argc: the count of the strings
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
@@ -62,7 +63,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	num1 = _atoi(argv[1]);
-	
+
 	num2 = _atoi(argv[2]);
 
 	result = num1 + num2;
