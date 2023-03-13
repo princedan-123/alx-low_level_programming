@@ -7,22 +7,19 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *m; 
 
-	size_t n = _strlen(s2);
+	char *m;
 
-	char newString[] = _strncat(s1, s2, n);
-	
-	int size = strlen(newString) + 1;
+	size_t n1 = _strlen(s1);
 
-	m = malloc(size);
+	size_t n2 = _strlen(s2);
 
-	_memset = (m, newString, size);
-
-	if (m == null)
+	m = malloc(n1 + n2 + 1);
+	if (m == NULL)
 		return (NULL);
+	_memcpy(m, s1, n1);
+	_memcpy(m + n1, s2, n2 + 1);
 	return (m);
-	free(m);
 }
 
 
@@ -39,39 +36,20 @@ int _strlen(char *s)
 		length++;
 	return (length);
 }
+
+#include "main.h"
 /**
- * _memset - allocates value to an address
- * @s: the pointer to the address
- * @b: the value to be allocated
- * @n: the size of memory to be allocated
- * Return: return the pointer s
+ * _memcpy - copies the value of an address
+ * @dest:destination
+ * @src:source
+ * @n: size of the value to be copied
+ * Return: return the pointer dest
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
-	{
-		s[i] = b;
-	}
-	return (s);
-}
-/**
- * _strncat - concatenates two strings
- * @dest: destination string
- * @src: source string
- * @n: the size of the string
- * Return: a pointer to the resulting string dest
- */
-char *_strncat(char *dest, char *src, int n)
-{
-	int index = 0;
-
-	int dest_len = 0;
-
-	while (dest[index++])
-		dest_len++;
-	for (index = 0; src[index] && index < n; index++)
-		dest[dest_len++] = src[index];
+		dest[i] = src[i];
 	return (dest);
 }
