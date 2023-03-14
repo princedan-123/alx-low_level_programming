@@ -24,7 +24,6 @@ char *_strdup(char *str)
 	if (s == NULL)
 		return (NULL);
 	return (s);
-	free(s);
 }
 /**
  * _memcpy - copies the value of an address
