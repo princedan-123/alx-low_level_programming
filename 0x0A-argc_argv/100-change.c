@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	int num2[] = {25, 10, 5, 2, 1};/*an array that holds the value of the coin*/
 
-	if (argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
