@@ -7,6 +7,7 @@
  */
 char *_strdup(char *str)
 {
+	size_t len;
 
 	char *s;
 
@@ -14,7 +15,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	size_t len = _strlen(str);
+	len = _strlen(str);
 
 	len = len + 1;
 
