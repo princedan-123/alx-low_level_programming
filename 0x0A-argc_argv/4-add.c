@@ -45,15 +45,10 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, i, j;
+	int i, j;
 
-	int result;
+	int result = 0;
 
-	if (argc < 3)
-	{
-		printf("0\n");
-		return (1);
-	}
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
@@ -63,13 +58,11 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
+
 		}
+		/*printf("%s",argv[i]);*/
+		result += _atoi(argv[i]);
 	}
-	num1 = _atoi(argv[1]);
-
-	num2 = _atoi(argv[2]);
-
-	result = num1 + num2;
 
 	printf("%d\n", result);
 
