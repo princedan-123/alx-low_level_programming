@@ -25,7 +25,7 @@ int *array_range(int min, int max)
 	{
 		if (array[0] == min)
 			continue;
-		array[i]=+ 1;
+		array[i] = +1;
 	}
 	return (array);
 }
