@@ -29,6 +29,13 @@ int _strlen(char *s)
 		length++;
 	return (length);
 }
+/**
+ * string_nconcat - allocates memory and concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: size
+ * Return: a pointer
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -40,18 +47,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 
-		s1 = '\0';
+		s1[0] = '\0';
 	}
 	if (s2 == NULL)
 	{
 		s2 = "";
 
-		s2 = '\0';
+		s2[0] = '\0';
 	}
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 
-	memory = malloc(sizeof(char) * len1 + len2);
+	memory = malloc(sizeof(char) * (len1 + n + 1));
 
 	if (memory == NULL)
 		return (NULL);
@@ -59,12 +66,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= len2)
 	{
 		_memcpy(memory, s1, len1);
-		_memcpy(memory + len2, s2, len2);
+		_memcpy(memory + len1, s2, len2);
 	}
 	if (n < len2)
 	{
 		_memcpy(memory, s1, len1);
-		_memcpy(memory + n, s2, n);
+		_memcpy(memory + len1, s2, n);
+		memory[len1 + n] = '\0';
 	}
 	return (memory);
 }
