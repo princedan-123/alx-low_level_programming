@@ -19,7 +19,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	memory = calloc(nmemb, size);
 	if (memory == NULL)
 		return (NULL);
-	/*for (i = 0; i < nmemb; i++)
-		memory[i] = 0;*/
+	/**
+	 * for (i = 0; i <nmemb; i++)
+	 * memory[i] = 0;
+	 */
 	return (memory);
 }
