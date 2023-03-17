@@ -57,6 +57,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
+	if (n >= len2)
+		n = len2;
 
 	memory = malloc(sizeof(char) * (len1 + n + 1));
 
@@ -65,6 +67,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= len2)
 	{
+
 		_memcpy(memory, s1, len1);
 		_memcpy(memory + len1, s2, len2);
 		memory[len1 + len2] = '\0';
