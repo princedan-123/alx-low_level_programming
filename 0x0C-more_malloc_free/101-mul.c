@@ -1,15 +1,20 @@
 #include <stdio.h>
-
-void print_number(long n) 
+/**
+ * print_number - prints a number with putchar
+ * @n: parameter
+ */
+void print_number(long n)
 {
-    if (n < 0) {
-        putchar('-');
-        n = -n;
-    }
-    if (n > 9) {
-        print_number(n / 10);
-    }
-    putchar(n % 10 + '0');
+	if (n < 0)
+	{
+		putchar('-');
+		n = -n;
+	}
+	if (n > 9)
+	{
+		print_number(n / 10);
+	}
+	putchar(n % 10 + '0');
 }
 
 #include "main.h"
@@ -56,6 +61,7 @@ int _atoi(char *s)
  * main - multiplis two integers and prints the results
  * @argc: the number of integers to be added
  * @argv: a poiter to the integers
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -92,7 +98,6 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(98);
 	}
-
 	num1 = _atoi(argv[1]);
 
 	num2 = _atoi(argv[2]);
@@ -101,5 +106,4 @@ int main(int argc, char *argv[])
 	print_number(result);
 	_putchar('\n');
 	return (0);
-
 }
