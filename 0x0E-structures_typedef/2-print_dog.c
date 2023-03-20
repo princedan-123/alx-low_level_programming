@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 /**
+ * print_dog - prints a struct data type
  * @d: a pointer to the struct dog data type
  */
 void print_dog(struct dog *d)
@@ -19,4 +20,3 @@ void print_dog(struct dog *d)
 	printf("Age: %f\n", d->age);
 	printf("Owner: %s\n", d->owner);
 }
-	
