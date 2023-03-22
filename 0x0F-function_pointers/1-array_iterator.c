@@ -9,7 +9,7 @@
 
 void print_array(int index)
 {
-	_putchar((char)index);
+	printf("\n%d", index);
 }
 
 /**
