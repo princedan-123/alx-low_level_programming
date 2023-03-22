@@ -1,16 +1,5 @@
 #include <stdio.h>
-/**
- * compare - a function to be used for comparision
- * @num: the integer to be searched for
- * Return: 0 or 1
- */
-
-int compare(int num)
-{
-	if (num == 98)
-		return (1);
-	return (0);
-}
+#include "function_pointers.h"
 
 /**
  * int_index - searches an array
@@ -23,6 +12,9 @@ int compare(int num)
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
+
+	if (array == NULL || cmp == NULL)
+		return (0);
 
 	if (size <= 0)
 		return (-1);
