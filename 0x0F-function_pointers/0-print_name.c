@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * print_format - prints a name as is
- * @name the name to be printed
+ * @name: the name to be printed
  * Return: nothing
  */
 
