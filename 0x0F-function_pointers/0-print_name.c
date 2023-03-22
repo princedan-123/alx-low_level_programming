@@ -1,14 +1,5 @@
 #include <stdio.h>
-/**
- * print_format - prints a name as is
- * @name: the name to be printed
- * Return: nothing
- */
-
-void print_format(char *name)
-{
-	printf("Hello, my name is %s\n", name);
-}
+#include "function_pointers.h"
 /**
  * print_name - prints a name
  * @name: the name to  be printed
