@@ -1,16 +1,6 @@
 #include <stdio.h>
 #include "function_pointers.h"
 
-/**
- * print_array - prints the elements of an array
- * @index: the index of each elements
- * Return: nothing is returned
- */
-
-void print_array(int index)
-{
-	printf("\n%d", index);
-}
 
 /**
  * array_iterator - iterates over an array to print its elements
@@ -23,6 +13,9 @@ void print_array(int index)
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
+
+	if (array == NULL || action == NULL)
+		return;
 
 	for (i = 0; i < size; i++)
 	{
