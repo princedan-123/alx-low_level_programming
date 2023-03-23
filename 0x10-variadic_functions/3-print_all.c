@@ -10,21 +10,13 @@
 
 void print_all(const char * const format, ...)
 {
-
-	int count = 0;
-
-	char a = 0;
-
-	char *str;
-
-	int b = 0;
-
-	float f = 0;
+	int count = 0, b = 0;
+	char a, *str;
+	float f;
 	va_list print;
 
 	va_start(print, format);
-	
-	while(format[count])
+	while (format[count])
 	{
 		switch (format[count])
 		{
@@ -45,13 +37,17 @@ void print_all(const char * const format, ...)
 			if (str == NULL)
 				printf("(nil)");
 			else
-				printf("%s", str);			
-			default:
+				printf("%s", str);
 			break;
-
+			default:
+			count++;
+			continue;
 		}
+
+		if (format[count + 1])
+			printf(", ");
 		count++;
 	}
-	va_end(print);
 	printf("\n");
+	va_end(print);
 }
