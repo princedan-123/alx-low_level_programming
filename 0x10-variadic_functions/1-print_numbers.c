@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - A variadic function that prints out integers
- * @seperator: A string that seperates the integers
+ * @separator: A string that seperates the integers
  * @n: The maximum number of integers to be printed
  * Return: Nothing is returned
  */
@@ -18,6 +18,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list print;
 
 	va_start(print, n);
+
+	if (separator == NULL)
+		return;
 
 	for (i = 0; i < n; i++)
 	{
