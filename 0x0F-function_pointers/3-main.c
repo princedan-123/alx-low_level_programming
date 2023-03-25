@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	cal = get_op_func(s);
+	cal = (int (*) (int, int))get_op_func(s);
 	if (cal == NULL)
 	{
 		printf("Error\n");
