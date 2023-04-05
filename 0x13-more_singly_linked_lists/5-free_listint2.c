@@ -8,16 +8,15 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *tmp = *head;
+	listint_t *tmp = *head;/*a temporary pointer to head*/
 
-	listint_t *next = NULL;
+	listint_t *next = NULL;/* a pointer to point to the next memory location*/
 
 	while (tmp != NULL)
 	{
 		next = tmp->next;
-
-		*head = NULL;
 		free(tmp);
 		tmp = next;
 	}
+	*head = NULL;
 }
