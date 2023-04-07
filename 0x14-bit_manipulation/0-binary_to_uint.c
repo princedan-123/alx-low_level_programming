@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * binary_to_uint - converts to decimal
@@ -19,8 +18,8 @@ unsigned int binary_to_uint(const char *b)
 
 	unsigned int result = 0;
 
-	if (b == NULL)
-		return (0);
+	if (*b == '\0')
+		return (0); /*check for empty string*/
 	for (i = 0; b[i] != '\0'; i++)/*check for non-digit characters*/
 	{
 		if ((b[i] > 49) || (b[i] < 48))
