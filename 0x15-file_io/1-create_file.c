@@ -14,33 +14,15 @@ int create_file(const char *filename, char *text_content)
 
 	int byteW;
 
-	char *f = "failed";
-
 	if (filename == NULL)
 		return (-1);
 
-	if (text_content == NULL)
-	{
-		fd = open(filename, O_RDWR, 0600);
-		if (fd < 0)
-			return (-1);
-	}
-	fd = open(filename, O_RDWR);
-	if (fd > 0)
-	{
-			truncate(filename, 0);
-	}
-	else
-		fd = open(filename, O_RDWR, 0600);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (fd < 0)
 		return (-1);
 	byteW = write(fd, text_content, strlen(text_content));
 	if (byteW < 0)
 		return (-1);
-	else if (byteW == -1 && fd == -1)
-	{
-		write(STDOUT_FILENO, f, 6);
-		return (-1);
-	}
+	close(fd);
 	return (1);
 }
