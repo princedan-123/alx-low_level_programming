@@ -1,16 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 
-/**
- * allocate - allocates memory to buffer
- * Return: a pointer to memory location
- */
-char *allocate()
-{
-	char *buffer = malloc(1024);
 
-	return (buffer);
-}
 /**
  * main - copies a file to another file
  * @argc: the count of argument
@@ -81,4 +72,15 @@ void close_file(int fd, int fdw)
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
+}
+
+/**
+ * allocate - allocates memory to buffer
+ * Return: a pointer to memory location
+ */
+char *allocate()
+{
+	char *buffer = malloc(1024);
+
+	return (buffer);
 }
