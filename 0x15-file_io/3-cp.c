@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from %s", argv[1]);
 		exit(98);
 	}
-	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
+	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	do {
 		buffer = allocate();
 		byteR = read(fd, buffer, 1024);
-		byteW = write(fdw, buffer, 1024);
+		byteW = write(fdw, buffer, byteR);
 		if (byteW < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
