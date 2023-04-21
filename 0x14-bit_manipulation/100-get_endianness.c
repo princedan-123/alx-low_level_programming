@@ -11,8 +11,12 @@ int get_endianness(void)
 
 	int result;
 
-	result = check & (1 << 24);
+	int language = 0; /*note language represents endianness*/
+
+	result = check & (1 & ((3 * sizeof(int)) / 4));
 	if (result)
-		return (1);
-	return (0);
+		language = 1;
+	else
+		language = 0;
+	return (language);
 }
