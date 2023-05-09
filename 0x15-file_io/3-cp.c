@@ -25,13 +25,13 @@ int main(int argc, char *argv[])
 		fdr = read(fd1, buffer, 1024);
 		if ((fd1 == -1) || (fdr == -1))
 		{
-			dprintf(STDERR_FILENO, "Error: can't read from %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
 			exit(98);
 		}
 		fdw = write(fd2, buffer, fdr);
 		if ((fd2 == -1) || (fdw == -1))
 		{
-			dprintf(STDERR_FILENO, "Error: cant't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Cant't write to %s\n", argv[2]);
 			exit(99);
 		}
 	} while (fdr != 0);
@@ -39,12 +39,12 @@ int main(int argc, char *argv[])
 	cfd2 = close(fd2);
 	if (cfd1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %i\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1);
 		exit(100);
 	}
 	if (cfd2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %i\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2);
 		exit(100);
 	}
 	return (0);
