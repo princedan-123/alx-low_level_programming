@@ -29,13 +29,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		count++;
 		if (count == index)
 		{
-			previous->next = tmp->next;
+			if (previous != NULL)
+				previous->next = tmp->next;
 			tmp2 = tmp->next;
 			if (tmp2 != NULL)
 				tmp2->prev = previous;
-			printf("two");
 			free(tmp);
-			printf("one");
 			return (1);
 		}
 	}
