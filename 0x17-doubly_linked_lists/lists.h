@@ -18,6 +18,7 @@ typedef struct dlistint_s
 /* standard header files*/
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdio.h>
 /* function prototypes*/
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
