@@ -15,22 +15,26 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		free(*head);
-		return (-1);
+		return (1);
 	}
-	while (*head != NULL)
+	if (tmp == NULL)
+		return (-1);
+	while (tmp != NULL)
 	{
+		previous = tmp;
+		tmp = tmp->next;
+		count++;
 		if (count == index)
 		{
 			previous->next = tmp->next;
 			tmp2 = tmp->next;
 			if (tmp2 != NULL)
 				tmp2->prev = previous;
+			printf("two");
 			free(tmp);
-				return (1);
+			printf("one");
+			return (1);
 		}
-		previous = tmp;
-		tmp = tmp->next;
-		count++;
 	}
 	return (-1);
 }
