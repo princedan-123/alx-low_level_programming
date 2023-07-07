@@ -20,7 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 	table->size = size;
-	for (i = 0; i < table->size; i++)
+	for (i = 0; i < size; i++)
 	{
 		table->array[i] = NULL;
 	} /*Making sure the array is empty*/
