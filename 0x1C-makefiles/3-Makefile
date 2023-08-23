@@ -13,7 +13,7 @@ all: $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	$(RM) *.~ *.swp $(NAME)
+	$(RM) *.~  $(NAME)
 
 oclean:
 	$(RM) *.o
