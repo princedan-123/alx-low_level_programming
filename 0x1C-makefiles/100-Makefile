@@ -6,17 +6,17 @@ SRC= main.c school.c
 # object codes
 OBJ=$(SRC:.c=.o)
 
-
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 NAME=school
 
-all: $(OBJ)
+.PHONY: all clean oclean fclean re
+
+all: $(OBJ) m.h
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
-
-$(SRC): m.h
 
 clean:
 	$(RM) *.~ *.swp $(NAME)
