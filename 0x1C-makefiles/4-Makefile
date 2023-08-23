@@ -1,0 +1,30 @@
+# creates an executable called school and explicitly performs clean ups
+# compiler
+CC=gcc
+# C source codes
+SRC= main.c school.c
+# object codes
+OBJ=$(SRC:.c=.o)
+
+
+
+NAME=school
+#remove command
+RM=rm -f
+# compilation flags
+CFLAGS= -Wall -Werror -Wextra -pedantic
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	$(RM) *.~ *.swp $(NAME)
+
+oclean:
+	$(RM) *.o
+
+fclean: clean oclean
+
+re: all fclean
