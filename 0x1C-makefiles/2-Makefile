@@ -3,13 +3,12 @@
 # SRC variable for all files with .c extension
 # OBJ variable for all file with .o extension
 
-all: $(NAME)
 
 CC=gcc
 SRC= main.c school.c
 OBJ=main.o school.o
 NAME=school
-$(NAME): $(OBJ)
+all:
 	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c
