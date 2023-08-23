@@ -1,0 +1,16 @@
+# builds the target file school
+# CC variable for the compiler
+# SRC variable for all files with .c extension
+# OBJ variable for all file with .o extension
+
+all: school
+
+CC=gcc
+SRC= main.c school.c
+OBJ=main.o school.o
+
+school: $(OBJ)
+	$(CC) $(OBJ) -o school
+
+%.o:%.c:
+	$(CC) $< $@
