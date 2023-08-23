@@ -10,7 +10,7 @@ SRC= main.c school.c
 OBJ=main.o school.o
 NAME=school
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o school
+	$(CC) $(OBJ) -o $(NAME)
 
-%.o:%.c:
-	$(CC) $< $@
+%.o: %.c
+	$(CC) -c $^ -o $@
