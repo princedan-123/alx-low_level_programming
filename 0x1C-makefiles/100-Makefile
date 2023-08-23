@@ -1,6 +1,5 @@
 # creates an executable called school and explicitly performs clean ups
 # compiler
-CC=gcc
 # C source codes
 SRC= main.c school.c
 # object codes
@@ -15,8 +14,8 @@ NAME=school
 all: $(OBJ) m.h
 	$(CC)  $(OBJ) -o $(NAME)
 
-.c.o:
-	$(CC)  -c $< -o $@
+# .c.o:
+#	$(CC)  -c $< -o $@
 
 clean:
 	$(RM) *.~ *.swp $(NAME)
