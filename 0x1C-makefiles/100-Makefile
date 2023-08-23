@@ -9,17 +9,14 @@ OBJ=$(SRC:.c=.o)
 
 
 NAME=school
-#remove command
-RM=rm -f
-# compilation flags
-CFLAGS= -Wall -Werror -Wextra -pedantic
+
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(SRC):m.h
+$(SRC): m.h
 
 clean:
 	$(RM) *.~ *.swp $(NAME)
