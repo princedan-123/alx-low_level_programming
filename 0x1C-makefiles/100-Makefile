@@ -1,5 +1,6 @@
 # creates an executable called school and explicitly performs clean ups
 # compiler
+cc=gcc
 # C source codes
 SRC= main.c school.c
 # object codes
