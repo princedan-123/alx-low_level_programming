@@ -49,7 +49,7 @@ void print_array(int *array, int left_index, int right_index)
 	for (; i <= right_index; i++)
 	{
 		printf("%d", array[i]);
-		if ( i < right_index)
+		if (i < right_index)
 			printf(", ");
 	}
 	printf("\n");
