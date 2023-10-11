@@ -8,31 +8,33 @@
  * @array: the array to be searched
  * @size: the size of the array
  * @value: the target value
- * Return: the index of the value else -1
+ * Return: the index of the value else - 1
  */
 
 int jump_search(int *array, size_t size, int value)
 {
-	int jump_size = sqrt(size), step = jump_size;
-	int last = 0; /* last index in each step */
-	size_t tmp = 0; /* to hold the value of last */
+	int step = sqrt(size);
+	int i = 0, prev = 0, length = size - 1;
+	size_t tmp = 0;
 
-	while (array[step - 1] <= value)
+	while (array[i] < value && tmp < size - 1)
 	{
-		tmp = step - 1;
-		if (tmp == size - 1)
-			return (-1);
-		if (array[step - 1] == value)
-			return (step - 1);
-		step += jump_size;
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
+		tmp = i;
+		prev = i;
+		i += step;
 	}
-	last = step - 1;
-	while (last > 0)
+	printf("Value found between indexes [%d] and [%d]\n", prev, i);
+	if (i > length)
 	{
-		printf("Value checked array[%d] = [%d]\n", last, array[last]);
-		if (array[last] == value)
-			return (last);
-		last--;
+		i -= step;
+	}
+	while (prev <= i)
+	{
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
+		if (array[prev] == value)
+			return (prev);
+		prev++;
 	}
 	return (-1);
 }
