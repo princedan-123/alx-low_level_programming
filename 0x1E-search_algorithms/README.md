@@ -5,9 +5,8 @@ Algorithm</p>
 <p>The project has a weight of 1 and took place between Dec 11, 2023 6:00 AM, must end by Dec 14, 2023 6:00 AM. And an autoreview was launched at the deadline of the project </p>
 <ul>
  <p>Here are the resources for the tasks: Read or watch the following </p>
-<li><a href="https://docs.python.org/3/howto/urllib2.html">HOWTO Fetch Internet Resources Using urllib Package</a></li>
-<li><a href="">Quickstart with Requests package</a></li>
-<li><a href=""></a>Requests package</li>
+<li><a href="https://en.wikipedia.org/wiki/Search_algorithm">Search algorithm</a></li>
+<li><a href="https://www.geeksforgeeks.org/g-fact-86/">Space complexity(1)</a></li>
 </ul>
 <p><em><h4>Learning Objectives</h4></em></p>
 <p>At the end of this project, you are expected to be able to explain to anyone, without the help of Google:</p>
