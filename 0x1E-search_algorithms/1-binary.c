@@ -17,7 +17,7 @@ void print_array(int *array, int left, int right)
 {
 	int i = left;
 
-	printf("Searching in array:");
+	printf("Searching in array: ");
 	while (i <= right)
 	{
 		printf("%d", array[i]);
