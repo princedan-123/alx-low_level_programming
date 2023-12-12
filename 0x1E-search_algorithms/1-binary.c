@@ -22,7 +22,7 @@ void print_array(int *array, int left, int right)
 	{
 		printf("%d", array[i]);
 		if (i < right)
-			printf(",");
+			printf(", ");
 		i++;
 	}
 	printf("\n");
