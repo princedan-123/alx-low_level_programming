@@ -14,29 +14,31 @@
 
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t prev = 0, i = 0, new_size = 0;
-	int ptr_array = NULL;
+	size_t prev = 0, i = 1, diff = 0;
 
 	if (array == NULL || size < 1)
 		return (-1);
 	while (i < size)
 	{
+		if (array[0] == value)
+			return (0);
 		if (array[i] >= value)
 			break;
 		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 		prev = i;
-		if (i == 0)
-			i += 2;
-		else
-			i *= 2;
+		i *= 2;
+	}
+	if (i == size)
+		i = size - 1;
+	else if (i > size)
+	{
+		diff = i - (size - 1);
+		i = i - diff;
 	}
 	printf("Value found between indexes [%ld] and [%ld]\n", prev, i);
-	ptr_array = &array[prev];
-	new_size = i - 1;
-	return (binary_search(ptr_array, new_size, value));
+	return (binary_algo(array, prev, i, value));
 }
 
-#include "search_algos.h"
 
 /**
  * print_array - Prints the element in an array.
@@ -67,23 +69,24 @@ void print_array(int *array, int left, int right)
 }
 
 /**
- * binary_search - Implementation of binary search algorithm.
+ * binary_algo - Implementation of binary search algorithm.
  *
  * @array: The array to search in.
  *
- * @size: The size of the array.
+ * @left: Beginning of the array.
+ *
+ * @right: Last index of the array.
  *
  * @value: The value to be searched for within the array
  *
  * Return: The index of the searched value or -1 if search is unsuccessful
  */
 
-int binary_search(int *array, size_t size, int value)
+int binary_algo(int *array, int left, int right, int value)
 {
-	int left = 0, right = size - 1;
 	int middle = 0;
 
-	if (array == NULL || size < 1)
+	if (array == NULL || right < 1)
 		return (-1);
 
 	while (left <= right)
